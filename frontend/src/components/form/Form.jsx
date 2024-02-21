@@ -76,8 +76,8 @@ const Form = () => {
 <br /><br />
 
             <div className='flexBotton'>
-                <Btn color="tertiary" variant="Añadir" />
-                <Btn color="secondary" variant="Atrás"/>
+                <Btn color="tertiary" text="Añadir" />
+                <Btn color="secondary" text="Atrás"/>
 
             </div>
         </form>
