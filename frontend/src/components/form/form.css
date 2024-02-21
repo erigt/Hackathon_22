@@ -1,0 +1,45 @@
+form {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.widthForm {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 15px;
+            input, select {
+            background-color: #D7D4D4;
+            border: none;
+            height: 40px;
+            border-radius: 12px;
+            color: #757575;
+            padding-left: 50px
+    };
+    
+}
+
+.bckgOptions {
+    background-color: whitesmoke;
+}
+
+textarea {
+    background-color: #D7D4D4;
+    border: none;
+    border-radius: 12px;
+    color: #757575;
+    padding: 35px 0 0 50px;
+    font-family: "Montserrat", sans-serif;
+} 
+
+.flexBotton {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
+}
