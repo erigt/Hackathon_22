@@ -1,7 +1,7 @@
 .cardsContainer{
-    width: 100%;
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     justify-items: center;
     grid-row-gap: 2rem;
     padding: 0 2rem;    
@@ -13,4 +13,12 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+}
+
+.homeContainer h1{
+    width: 40%;
+    font-size: 60px;
+    text-align: center;
+    color: var( --color-heading);
+    margin: 2rem;
 }

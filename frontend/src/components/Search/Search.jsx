@@ -8,7 +8,18 @@ export default function Search() {
   return (
   <section className={styles.searchContainer}>
     <div className={styles.searchBar}>
-      <TextField  fullWidth size="small" id="filled-basic" label="Buscar" variant="outlined" />
+      <TextField  
+        fullWidth 
+        size="small" 
+        id="filled-basic" 
+        label="Buscar" 
+        variant="outlined"
+        InputProps={{
+          sx: {
+            bgcolor: '#D7D4D4',
+          },
+        }}
+        />
       <Btn color='secondary' text='Buscar'></Btn>
       <img src="/cil_animal.png" alt="" />
     </div>
