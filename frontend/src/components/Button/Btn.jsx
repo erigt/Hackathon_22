@@ -19,14 +19,15 @@ const theme = createTheme({
 
 
 
-export default function Btn({color}) {
+export default function Btn({color, text}) {
   return (
     <ThemeProvider theme={theme}>
-    <Button variant="contained" color={color}>Contained</Button>
+    <Button variant="contained" color={color}>{text}</Button>
     </ThemeProvider>    
   )
 }
 
 Btn.propTypes = {
     color: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+    text: PropTypes.string.isRequired,
 };

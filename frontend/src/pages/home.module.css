@@ -1,0 +1,16 @@
+.cardsContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    justify-items: center;
+    grid-row-gap: 2rem;
+    padding: 0 2rem;    
+}
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
