@@ -4,7 +4,7 @@ import com.hackathon.grupo22.backend.controllers.Category;
 
 public class AnnouncementRequest {
 
-    private Integer announcementId;
+    private Integer id;
     private String title;
     private String description;
     private String contact;
@@ -17,9 +17,9 @@ public class AnnouncementRequest {
 
     }
 
-    public AnnouncementRequest(Integer announcementId, String title, String description, String contact, Integer price,
+    public AnnouncementRequest(Integer id, String title, String description, String contact, Integer price,
             String imagenUrl, Category category, String location) {
-        this.announcementId = announcementId;
+        this.id = id;
         this.title = title;
         this.description = description;
         this.contact = contact;
@@ -29,12 +29,12 @@ public class AnnouncementRequest {
         this.location = location;
     }
 
-    public Integer getAnnouncementId() {
-        return announcementId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAnnouncementId(Integer announcementId) {
-        this.announcementId = announcementId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {

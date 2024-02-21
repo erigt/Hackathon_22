@@ -14,7 +14,7 @@ public class Announcement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer announcementId;
+    private Integer id;
     private String title;
     private String description;
     private String contact;
@@ -23,9 +23,9 @@ public class Announcement {
     private Category category;
     private String location;
 
-    public Announcement(Integer announcementId, String title, String description, String contact, Integer price,
+    public Announcement(Integer id, String title, String description, String contact, Integer price,
             String imagenUrl, Category category, String location) {
-        this.announcementId = announcementId;
+        this.id = id;
         this.title = title;
         this.description = description;
         this.contact = contact;
@@ -39,12 +39,12 @@ public class Announcement {
 
     }
 
-    public Integer getAnnouncementId() {
-        return announcementId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAnnouncementId(Integer announcementId) {
-        this.announcementId = announcementId;
+    public void setiId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
