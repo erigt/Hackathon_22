@@ -1,0 +1,14 @@
+.rrssContainer{
+    display: flex;
+    width: 10%;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.rrssContainer li{
+   list-style: none;
+}
+
+.rrssContainer li img{
+    width: 30px;
+ }

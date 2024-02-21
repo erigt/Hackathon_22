@@ -1,5 +1,6 @@
 import Card from "../components/Card/Card";
 import Search from "../components/Search/Search";
+import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import styles from './home.module.css'
 
@@ -22,8 +23,8 @@ export default function Home() {
         <Card/>
         <Card/>
       </section>
-      
     </main>
+    <Footer/>
     </>
   )
 }
