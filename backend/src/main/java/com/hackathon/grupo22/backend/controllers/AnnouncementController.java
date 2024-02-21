@@ -54,8 +54,8 @@ public class AnnouncementController {
     }
 
     @GetMapping("/announcement/{id}")
-    public ResponseEntity<AnnouncementResponse> getAnnouncementById(@PathVariable Integer idAnnouncement) {
-        Optional<Announcement> optionalAnnouncement = repository.findById(idAnnouncement);
+    public ResponseEntity<AnnouncementResponse> getAnnouncementById(@PathVariable Integer id) {
+        Optional<Announcement> optionalAnnouncement = repository.findById(id);
         if (optionalAnnouncement.isPresent()) {
             Announcement announcement = optionalAnnouncement.get();
             AnnouncementResponse response = new AnnouncementResponse(
