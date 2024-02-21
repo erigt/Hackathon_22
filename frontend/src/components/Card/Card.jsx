@@ -2,13 +2,13 @@ import Btn from "../Button/Btn";
 import styles from './card.module.css'
 
 
-export default function Card() {
+export default function Card({animal}) {
   return (
     <section className={styles.cardContainer} >
-        <img src="/dog.webp" alt="" />
-        <h3>¡Paseo tu perro!</h3>
-        <h4>10€/hora</h4>
-        <p className={styles.description}>¿Necesitas un poco de ayuda para asegurarte de que tu mejor amigo peludo obtenga la dosis adecuada de ejercicio y diversión? ¡No busques más! Soy un amante de los perros con años de experiencia en el cuidado y la atención de mascotas. </p>
+        <img src={animal.imageUrl} alt={animal.title} />
+        <h3>{animal.title}</h3>
+        <h4>{animal.price}</h4>
+        <p className={styles.description}>{animal.description} </p>
         <Btn color='tertiary' text='Ver Más'></Btn>
     </section>
   )
