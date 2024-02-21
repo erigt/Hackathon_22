@@ -7,6 +7,22 @@ form {
     justify-content: center;
 }
 
+h2 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: var(--color-heading);
+    width: 100%;
+    text-align: center;
+  }
+
+  .homeContainer h1{
+    width: 40%;
+    font-size: 60px;
+    text-align: center;
+    color: var( --color-heading);
+    margin: 2rem;
+}
+
 .widthForm {
     display: flex;
     flex-direction: column;
