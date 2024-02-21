@@ -72,30 +72,26 @@ public class AnnouncementController {
     @PostMapping("/announcement")
     public AnnouncementResponse createAnnouncement(@RequestBody AnnouncementRequest request) {
         Announcement announcement = new Announcement(
-            request.getId(), 
-            request.getTitle(), 
-            request.getDescription(), 
-            request.getContact(), 
-            request.getPrice(), 
-            request.getImageUrl(), 
-            request.getCategory(), 
-            request.getLocation()
-        );  
+                request.getId(),
+                request.getTitle(),
+                request.getDescription(),
+                request.getContact(),
+                request.getPrice(),
+                request.getImageUrl(),
+                request.getCategory(),
+                request.getLocation());
 
         Announcement savedAnnouncement = repository.save(announcement);
 
         return new AnnouncementResponse(
-            savedAnnouncement.getId(),
-            savedAnnouncement.getTitle(),
-            savedAnnouncement.getDescription(),
-            savedAnnouncement.getContact(),
-            savedAnnouncement.getPrice(),
-            savedAnnouncement.getImageUrl(),
-            savedAnnouncement.getCategory(),
-            savedAnnouncement.getLocation());
-        
+                savedAnnouncement.getId(),
+                savedAnnouncement.getTitle(),
+                savedAnnouncement.getDescription(),
+                savedAnnouncement.getContact(),
+                savedAnnouncement.getPrice(),
+                savedAnnouncement.getImageUrl(),
+                savedAnnouncement.getCategory(),
+                savedAnnouncement.getLocation());
 
     }
 }
-
-
