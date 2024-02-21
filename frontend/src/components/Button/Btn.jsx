@@ -22,7 +22,7 @@ const theme = createTheme({
 export default function Btn({color, text}) {
   return (
     <ThemeProvider theme={theme}>
-    <Button variant="contained" color={color}>{text}</Button>
+    <Button variant="contained" color={color} sx={{ borderRadius: '15px',  height: '40px', textTransform: 'none' }}>{text}</Button>
     </ThemeProvider>    
   )
 }
