@@ -31,7 +31,7 @@ public class AnnouncementController {
         this.repository = repository;
     }
 
-    @GetMapping("/Announcement")
+    @GetMapping("/announcement")
     public List<AnnouncementResponse> showAnnouncement() {
         List<AnnouncementResponse> announcementResponse = new ArrayList<AnnouncementResponse>();
         List<Announcement> announcementInDataBaseAnnouncement = repository.findAll();
