@@ -1,9 +1,10 @@
 import {
-    createBrowserRouter
-  } from "react-router-dom";
+  createBrowserRouter
+} from "react-router-dom";
 import Home from "../pages/Home";
 import Details from "../pages/Details";
 import AddForm from "../pages/AddForm";
+
 
   export const router = createBrowserRouter([
     {
@@ -19,3 +20,4 @@ import AddForm from "../pages/AddForm";
         element: <AddForm/>
     }
   ]);
+
