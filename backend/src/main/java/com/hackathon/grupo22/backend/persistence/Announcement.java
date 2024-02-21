@@ -1,5 +1,6 @@
 package com.hackathon.grupo22.backend.persistence;
 
+import com.hackathon.grupo22.backend.controllers.AnnouncementResponse;
 import com.hackathon.grupo22.backend.controllers.Category;
 
 import jakarta.persistence.Entity;
@@ -101,6 +102,11 @@ public class Announcement {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void add(AnnouncementResponse announcementResponse) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
 }
