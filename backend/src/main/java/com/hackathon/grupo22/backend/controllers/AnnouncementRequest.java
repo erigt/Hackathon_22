@@ -1,6 +1,6 @@
 package com.hackathon.grupo22.backend.controllers;
 
-import com.hackathon.grupo22.backend.controllers.Category;
+// import com.hackathon.grupo22.backend.controllers.Category;
 
 public class AnnouncementRequest {
 
@@ -9,7 +9,7 @@ public class AnnouncementRequest {
     private String description;
     private String contact;
     private Integer price;
-    private String imagenUrl;
+    private String ImageUrl;
     private Category category;
     private String location;
 
@@ -18,13 +18,13 @@ public class AnnouncementRequest {
     }
 
     public AnnouncementRequest(Integer id, String title, String description, String contact, Integer price,
-            String imagenUrl, Category category, String location) {
+            String ImageUrl, Category category, String location) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.contact = contact;
         this.price = price;
-        this.imagenUrl = imagenUrl;
+        this.ImageUrl = ImageUrl;
         this.category = category;
         this.location = location;
     }
@@ -69,12 +69,12 @@ public class AnnouncementRequest {
         this.price = price;
     }
 
-    public String getImagenUrl() {
-        return imagenUrl;
+    public String getImageUrl() {
+        return ImageUrl;
     }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
     }
 
     public Category getCategory() {

@@ -1,5 +1,6 @@
 package com.hackathon.grupo22.backend.persistence;
 
+import com.hackathon.grupo22.backend.controllers.AnnouncementResponse;
 import com.hackathon.grupo22.backend.controllers.Category;
 
 import jakarta.persistence.Entity;
@@ -19,18 +20,18 @@ public class Announcement {
     private String description;
     private String contact;
     private Integer price;
-    private String imagenUrl;
+    private String imageUrl;
     private Category category;
     private String location;
 
     public Announcement(Integer id, String title, String description, String contact, Integer price,
-            String imagenUrl, Category category, String location) {
+            String imageUrl, Category category, String location) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.contact = contact;
         this.price = price;
-        this.imagenUrl = imagenUrl;
+        this.imageUrl = imageUrl;
         this.category = category;
         this.location = location;
     }
@@ -79,12 +80,12 @@ public class Announcement {
         this.price = price;
     }
 
-    public String getImagenUrl() {
-        return imagenUrl;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Category getCategory() {
@@ -101,6 +102,11 @@ public class Announcement {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void add(AnnouncementResponse announcementResponse) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
 }
