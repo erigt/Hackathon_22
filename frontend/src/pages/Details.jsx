@@ -14,6 +14,9 @@ export default function Details() {
   }, [id]);
   return (
     <div>
+      <img
+        src={animal.imageUrl}
+        alt={animal.title} />
       <h3>{animal.title}</h3>
       <p>{animal.price}</p>
       <p>{animal.contact}</p>
