@@ -1,5 +1,4 @@
 package com.hackathon.grupo22.backend.controllers;
-// import com.hackathon.grupo22.backend.controllers.Category;
 
 public class AnnouncementResponse {
     
