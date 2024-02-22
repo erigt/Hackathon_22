@@ -1,36 +1,36 @@
 const Validator = (formData) => {
     const errors = {};
 
-    if (!formData.titulo.trim()) {
-        errors.titulo = 'El título es requerido';
+    if (!formData.title.trim()) {
+        errors.title = 'El título es requerido';
     }
 
-    if (!formData.categoria.trim()) {
-        errors.categoria = 'La categoría es requerida';
+    if (!formData.category.trim()) {
+        errors.category = 'La categoría es requerida';
     }
 
-    if (!formData.localizacion.trim()) {
-        errors.localizacion = 'La localización es requerida';
+    if (!formData.location.trim()) {
+        errors.location = 'La localización es requerida';
     }
 
-    if (!formData.precio.trim()) {
-        errors.precio = 'El precio es requerido';
-    } else if (isNaN(Number(formData.precio))) {
-        errors.precio = 'El precio debe ser un número';
+    if (!formData.price.trim()) {
+        errors.price = 'El precio es requerido';
+    } else if (isNaN(Number(formData.price))) {
+        errors.price = 'El precio debe ser un número';
     }
 
-    if (!formData.imagen.trim()) {
-        errors.imagen = 'La URL de la imagen es requerida';
-    } else if (!/^https?:\/\/\S+$/i.test(formData.imagen)) {
-        errors.imagen = 'La URL de la imagen no es válida';
+    if (!formData.imageUrl.trim()) {
+        errors.imageUrl = 'La URL de la imagen es requerida';
+    } else if (!/^https?:\/\/\S+$/i.test(formData.imageUrl)) {
+        errors.imageUrl = 'La URL de la imagen no es válida';
     }
 
-    if (!formData.contacto.trim()) {
-        errors.contacto = 'El número de contacto es requerido';
+    if (!formData.contact.trim()) {
+        errors.contact = 'El número de contacto es requerido';
     }
 
-    if (!formData.descripcion.trim()) {
-        errors.descripcion = 'La descripción es requerida';
+    if (!formData.description.trim()) {
+        errors.description = 'La descripción es requerida';
     }
 
     return errors;

@@ -2,17 +2,21 @@ import React, { useState, useEffect } from 'react';
 import './form.modules.css';
 import axios from "axios";
 import Btn from "../Button/Btn";
+import { useNavigate } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import Validator from './Validator';
 
 const Form = () => {
+    const navigate = useNavigate();
+
     const [formulario, setFormulario] = useState({
-        titulo: '',
-        categoria: '',
-        localizacion: '',
-        precio: '',
-        imagen: '',
-        contacto: '',
-        descripcion: ''
+        title: '',
+        category: '',
+        location: '',
+        price: '',
+        imageUrl: '',
+        contact: '',
+        description: ''
     });
 
     const [errors, setErrors] = useState({});
@@ -26,18 +30,11 @@ const Form = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setFormulario({
-            titulo: '',
-            categoria: '',
-            localizacion: '',
-            precio: '',
-            imagen: '',
-            contacto: '',
-            descripcion: ''
-        });
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        await axios.post("http://localhost:8080/announcement", formulario);
+        alert('¡Tu anuncio se ha guardado correctamente!');
+        navigate("/");
     };
 
     useEffect(() => {
@@ -54,55 +51,52 @@ const Form = () => {
     }, [formulario]);
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method='POST'>
             <div className='widthForm'>
                 <label>Titulo:</label>
-                <input type="text" name="titulo" value={formulario.titulo} onChange={handleChange} placeholder='Título' />
-                {errors.titulo && <div className="errorMessage">{errors.titulo}</div>}
+                <input type="text" name="title" value={formulario.title} onChange={handleChange} placeholder='Título' />
+                {errors.title && <div className="errorMessage">{errors.title}</div>}
             </div>
             <div className='widthForm'>
                 <label>Categoria:</label>
-                <select name="categoria" value={formulario.categoria} onChange={handleChange}>
+                <select name="category" value={formulario.category} onChange={handleChange}>
                     <option value="">Seleccionar categoría</option>
-                    <option className='bckgOptions' value="Servicios">Servicios</option>
-                    <option className='bckgOptions' value="Productos">Productos</option>
+                    <option className='bckgOptions' value="SERVICIO">Servicios</option>
+                    <option className='bckgOptions' value="PRODUCTO">Productos</option>
                 </select>
-                {errors.categoria && <div className="errorMessage">{errors.categoria}</div>}
+                {errors.category && <div className="errorMessage">{errors.category}</div>}
             </div>
             <div className='widthForm'>
                 <label>Localizacion:</label>
-                <input type="text" name="localizacion" value={formulario.localizacion} onChange={handleChange} placeholder='Código Postal' />
-                {errors.localizacion && <div className="errorMessage">{errors.localizacion}</div>}
+                <input type="text" name="location" value={formulario.location} onChange={handleChange} placeholder='Provincia' />
+                {errors.location && <div className="errorMessage">{errors.location}</div>}
             </div>
             <div className='widthForm'>
                 <label>Precio:</label>
-                <input type="text" name="precio" value={formulario.precio} onChange={handleChange} placeholder='Precio' />
-                {errors.precio && <div className="errorMessage">{errors.precio}</div>}
+                <input type="text" name="price" value={formulario.price} onChange={handleChange} placeholder='Precio' />
+                {errors.price && <div className="errorMessage">{errors.price}</div>}
             </div>
             <div className='widthForm'>
                 <label>Imagen:</label>
-                <input type="text" name="imagen" value={formulario.imagen} onChange={handleChange} placeholder='Url' />
-                {errors.imagen && <div className="errorMessage">{errors.imagen}</div>}
+                <input type="text" name="imageUrl" value={formulario.imageUrl} onChange={handleChange} placeholder='Url' />
+                {errors.imageUrl && <div className="errorMessage">{errors.imageUrl}</div>}
             </div>
             <div className='widthForm'>
                 <label>Contacto:</label>
-                <input type="text" name="contacto" value={formulario.contacto} onChange={handleChange} placeholder='número de teléfono' />
-                {errors.contacto && <div className="errorMessage">{errors.contacto}</div>}
+                <input type="text" name="contact" value={formulario.contact} onChange={handleChange} placeholder='número de teléfono' />
+                {errors.contact && <div className="errorMessage">{errors.contact}</div>}
             </div>
             <div className='widthForm'>
                 <label>Descripcion:</label>
-                <textarea name="descripcion" value={formulario.descripcion} onChange={handleChange} rows={6} placeholder='Descripción'></textarea>
-                {errors.descripcion && <div className="errorMessage">{errors.descripcion}</div>}
+                <textarea name="description" value={formulario.description} onChange={handleChange} rows={6} placeholder='Descripción'></textarea>
+                {errors.description && <div className="errorMessage">{errors.description}</div>}
             </div>
             <br /><br />
 
             <div className='flexBotton'>
-                <Btn color="tertiary" text="Añadir" />
-                <Btn color="secondary" text="Atrás" />
+                <button type="submit">Añadir</button>
+                <NavLink to="/"> <Btn color="secondary" text="Atrás" /> </NavLink>
             </div>
-
-
-            {success && <div className="successMessage">{success}</div>}
         </form>
     );
 }

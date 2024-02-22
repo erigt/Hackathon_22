@@ -1,0 +1,26 @@
+.detailsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detailsContainer article{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.detailsContainer img{
+    margin: 1rem 3rem;
+    border-radius: 20px;
+}
+
+.detailsContainer button{
+    font-weight: 700;
+}
+
