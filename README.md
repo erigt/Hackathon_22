@@ -30,12 +30,15 @@ Descarga la aplicación ahora y únete a la comunidad que está cambiando el mun
 | BRANCH   | Description                                                                           |
 | -------- | ------------------------------------------------------------------------------------- |
 | main     | Rama principal. Aquí alojamos solo los resultados finales de cada historia de usuario |
-| dev      | Rama de desarrollo. Aquí juntamos el trabajo individual para unificarlo                              |
-| feature-details | Rama de creacion de deatils, para crear, mergear y borrar.
-| feature-form | Rama de desarrollo de la parte del formulario, mergeo y borrado                      |
-| feature-home  | Rama para implementar pagina principal a la aplicacion, mergeo y borrado                    |
-| feature-footer  | Rama para implementar el footer a todas las paginas, mergeo y borrado  |
-| dev_get  | Rama para implementar los métodos get de la parte de backend          |
+| dev      | Rama de desarrollo. Aquí juntamos el trabajo individual para unificarlo               |
+| feature-details | Rama de creacion de deatils, para crear, mergear y borrar.                     |
+| feature-form | Rama de desarrollo de la parte del formulario, mergeo y borrado                   |
+| feature-home  | Rama para implementar pagina principal a la aplicacion, mergeo y borrado         |
+| feature-footer  | Rama para implementar el footer a todas las paginas, mergeo y borrado          |
+| dev_get  | Rama para implementar los métodos get de la parte de backend                          |
+| test  | Rama para la comprobacion y desarrollo de los test                                       |
+| feature-put  | Rama para desarrolar metodo PUT en backend                                        |
+| feature-card  | Rama de desarrollo para anuncio especifico en Frontend                           |
 
 ![](/FRONTEND/public/logo.png)
 

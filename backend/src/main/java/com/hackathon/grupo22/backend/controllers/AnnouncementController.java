@@ -114,21 +114,21 @@ public class AnnouncementController {
     
 
     @PutMapping("/announcement/{id}")
-    public ResponseEntity<AnnouncementResponse> updateAnnouncement(@PathVariable Integer id, @RequestBody AnnouncementRequest request) {
+    public ResponseEntity<AnnouncementResponse> updateAnnouncement(@PathVariable Integer id, @RequestBody AnnouncementRequest updateAnnouncement) {
     Optional<Announcement> optionalAnnouncement = repository.findById(id);
     if (optionalAnnouncement.isPresent()) {
-                Announcement announcement = optionalAnnouncement.get();
-                announcement.setTitle(request.getTitle());
-                announcement.setDescription(request.getDescription());
-                announcement.setContact(request.getContact());
-                announcement.setPrice(request.getPrice());
-                announcement.setImageUrl(request.getImageUrl());
-                announcement.setCategory(request.getCategory());
-                announcement.setLocation(request.getLocation());
+                Announcement existingAnnouncement = optionalAnnouncement.get();
+                existingAnnouncement.setTitle(updateAnnouncement.getTitle());
+                existingAnnouncement.setDescription(updateAnnouncement.getDescription());
+                existingAnnouncement.setContact(updateAnnouncement.getContact());
+                existingAnnouncement.setPrice(updateAnnouncement.getPrice());
+                existingAnnouncement.setImageUrl(updateAnnouncement.getImageUrl());
+                existingAnnouncement.setCategory(updateAnnouncement.getCategory());
+                existingAnnouncement.setLocation(updateAnnouncement.getLocation());
 
-        Announcement updatedAnnouncement = repository.save(announcement);
+        Announcement updatedAnnouncement = repository.save(existingAnnouncement);
 
-        AnnouncementResponse response = new AnnouncementResponse(
+        AnnouncementResponse announcementResponse = new AnnouncementResponse(
                 updatedAnnouncement.getId(),
                 updatedAnnouncement.getTitle(),
                 updatedAnnouncement.getDescription(),
@@ -138,7 +138,7 @@ public class AnnouncementController {
                 updatedAnnouncement.getCategory(),
                 updatedAnnouncement.getLocation());
 
-        return ResponseEntity.ok().body(response);
+        return ResponseEntity.ok().body(announcementResponse);
     } else {
         return ResponseEntity.notFound().build();
     }
