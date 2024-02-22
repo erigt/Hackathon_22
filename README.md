@@ -172,7 +172,7 @@ Edita las variables de entorno:
 ## Vistas de la aplicación
 
 
-[Ver Prototipado con FIGMA](https://www.figma.com/file/Nvk7bk81hVoLORHvnWpjlD/Greenfield-Library?type=design&node-id=1%3A72&mode=design&t=7EFIZMEFp571UF2c-1)
+[Ver Prototipado con FIGMA](https://www.figma.com/file/HaasWeVTJPV5YR3nPBazsy/HACKATHON-F5-EQUIPO-22?type=design&node-id=1%3A2&mode=design&t=6cp6TcGEgyb6QOEo-1)
 
 Home: Anuncios disponibles
 
