@@ -9,7 +9,7 @@ export default function Card({ animal }) {
     <section className={styles.cardContainer} >
       <img src={animal.imageUrl} alt={animal.title} />
       <h3>{animal.title}</h3>
-      <h4>{animal.price}</h4>
+      <h4>{animal.price}€</h4>
       <p className={styles.description}>{animal.description} </p>
       <div className={styles.cardFav}>
         <FavoriteIcon/>
