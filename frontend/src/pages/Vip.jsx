@@ -6,12 +6,12 @@ import "./vip.modules.css";
 export default function Vip() {
     return (
         <>
+                <section className='vipContainer'>
             <Header text1={'Cerrar Sesion'} text2={'Home'} />
-                <main className='vipContainer'>
                     <h2>Dónde está mi mascota ?</h2>
                     <MapGeo />
-                </main>
             <Footer />
+                </section>
         </>
     )
 }

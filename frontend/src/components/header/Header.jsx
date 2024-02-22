@@ -17,5 +17,5 @@ export default function Header({ text1, text2 }) {
 }
 
 Header.propTypes = {
-  text1: PropTypes.string.isRequired, text2: PropTypes.string.isRequired, 
+  text1: PropTypes.string.isRequired, text2: PropTypes.string.isRequired,
 };

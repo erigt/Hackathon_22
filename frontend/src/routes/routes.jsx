@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Details from "../pages/Details";
 import AddForm from "../pages/AddForm";
 import Vip from "../pages/Vip";
+import VideoIntro from "../pages/Video";
 
 export const router = createBrowserRouter([
   {
@@ -22,5 +23,9 @@ export const router = createBrowserRouter([
   {
     path: "/vip",
     element: <Vip />
+  },
+  {
+    path: "/video",
+    element: <VideoIntro />
   }
 ]);

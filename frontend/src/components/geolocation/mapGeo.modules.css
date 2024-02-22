@@ -1,4 +1,11 @@
-.mapGeoContainer img{
+.mapGeoContainer {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+
+.imgMapGeo {
+    width: 60%;
 }

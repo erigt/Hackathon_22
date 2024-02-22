@@ -1,7 +1,12 @@
-.vipContainer{
+.videoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+
     height: 100vh;
+
+}
+
+.videoContainer h2 {
+    padding-bottom: 1%;
 }
