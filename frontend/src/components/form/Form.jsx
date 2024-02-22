@@ -94,8 +94,8 @@ const Form = () => {
             <br /><br />
 
             <div className='flexBotton'>
-                <button type="submit">Añadir</button>
-                <NavLink to="/"> <Btn color="secondary" text="Atrás" /> </NavLink>
+                <button className='btnSubmit' type="submit">Añadir</button>
+                <NavLink to="/"> <Btn className='btnBack' color="secondary" text="Atrás" /> </NavLink>
             </div>
         </form>
     );

@@ -40,3 +40,31 @@
    overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  .cardFav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.cardFav svg{
+    font-size: 30px;
+    
+}
+
+.cardFav svg {
+    font-size: 30px;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.cardFav svg:hover {
+    transform: scale(1.3); /* Escalar el SVG al hacer hover */
+}
+
+.cardFav svg:active {
+    transform: scale(1.5); /* Escalar el SVG al hacer clic */
+}
