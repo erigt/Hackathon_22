@@ -7,9 +7,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.hackathon.grupo22.backend.persistence.Announcement;
 import com.hackathon.grupo22.backend.persistence.AnnouncementRepository;
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 //import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
@@ -50,8 +54,8 @@ public class AnnouncementController {
     }
 
     @GetMapping("/announcement/{id}")
-    public ResponseEntity<AnnouncementResponse> getAnnouncementById(@PathVariable Integer idAnnouncement) {
-        Optional<Announcement> optionalAnnouncement = repository.findById(idAnnouncement);
+    public ResponseEntity<AnnouncementResponse> getAnnouncementById(@PathVariable Integer id) {
+        Optional<Announcement> optionalAnnouncement = repository.findById(id);
         if (optionalAnnouncement.isPresent()) {
             Announcement announcement = optionalAnnouncement.get();
             AnnouncementResponse response = new AnnouncementResponse(
@@ -93,5 +97,16 @@ public class AnnouncementController {
                 savedAnnouncement.getCategory(),
                 savedAnnouncement.getLocation());
 
+    }
+
+    @DeleteMapping("announcement/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteAnnouncementById(@PathVariable Integer id) {
+        Optional<Announcement> optionalAnnouncement = repository.findById(id);
+        if (optionalAnnouncement.isPresent()) {
+            repository.delete(optionalAnnouncement.get());
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Announcement not found");
+        }
     }
 }
