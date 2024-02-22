@@ -7,7 +7,7 @@ export default function AddForm() {
   return (
     <>
     <main>
-    <Header text={'Cerrar Sesion'} />
+    <Header text1={'Cerrar Sesion'} text2={'Hazte Vip'} />
     <h2>¡Añade tu anuncio!</h2>
       <Form />
       <Footer />
