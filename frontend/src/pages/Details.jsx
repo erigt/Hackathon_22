@@ -44,8 +44,10 @@ export default function Details() {
           </div>
           <p>Descripción: {animal.description}</p>
         </article>
-        <Btn color='tertiary' text='Contacta' />
-        <DeleteOutlineIcon onClick={() => deleteCard(animal.id)} />
+        <div className={styles.btnGroup}>
+          <Btn color='tertiary' text='Contacta' />
+          <DeleteOutlineIcon onClick={() => deleteCard(animal.id)} />
+        </div>
       </main>
       <Footer />
     </>
