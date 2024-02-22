@@ -96,6 +96,8 @@ https://www.linkedin.com/in/lbonu/
 https://www.linkedin.com/in/mavafigalloz/
 - Laura - Desarrollo de Figma y Frontend.
 https://www.linkedin.com/in/laura-gil-solano/
+- Oliver - Desarrollo de Frontend.
+
 
 
 ## Isnstalación
@@ -229,6 +231,8 @@ https://www.linkedin.com/in/lbonu/
 https://www.linkedin.com/in/mavafigalloz/
 - Laura - Figma and Frontend development.
 https://www.linkedin.com/in/laura-gil-solano/
+- Alicia - Frontend development
+
 
 
 ## Isnstalation 
@@ -243,6 +247,6 @@ https://code.visualstudio.com/download
 
 - In this case as the project is already started it will be enough to put in the terminal: ```pnpm install``` , this will install all the necessary dependencies.
 
-- We will have to install a React library called MaterialUI, in the terminal we will insert the following code: ````pnpm install @mui/material @emotion/react @emotion/styled @mui/styled-engine-sc styled-components``` with this we will see the UX of our page with the components that we have used.
+- We will have to install a React library called MaterialUI, in the terminal we will insert the following code: ```pnpm install @mui/material @emotion/react @emotion/styled @mui/styled-engine-sc styled-components``` with this we will see the UX of our page with the components that we have used.
 
 - For the database we have it through PostgreSQL, you can access through this link:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
