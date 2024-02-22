@@ -20,6 +20,7 @@ import com.hackathon.grupo22.backend.persistence.AnnouncementRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 //import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 //import org.springframework.web.bind.annotation.RequestParam;
@@ -109,4 +110,39 @@ public class AnnouncementController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Announcement not found");
         }
     }
+
+    
+
+    @PutMapping("/announcement/{id}")
+    public ResponseEntity<AnnouncementResponse> updateAnnouncement(@PathVariable Integer id, @RequestBody AnnouncementRequest request) {
+    Optional<Announcement> optionalAnnouncement = repository.findById(id);
+    if (optionalAnnouncement.isPresent()) {
+                Announcement announcement = optionalAnnouncement.get();
+                announcement.setTitle(request.getTitle());
+                announcement.setDescription(request.getDescription());
+                announcement.setContact(request.getContact());
+                announcement.setPrice(request.getPrice());
+                announcement.setImageUrl(request.getImageUrl());
+                announcement.setCategory(request.getCategory());
+                announcement.setLocation(request.getLocation());
+
+        Announcement updatedAnnouncement = repository.save(announcement);
+
+        AnnouncementResponse response = new AnnouncementResponse(
+                updatedAnnouncement.getId(),
+                updatedAnnouncement.getTitle(),
+                updatedAnnouncement.getDescription(),
+                updatedAnnouncement.getContact(),
+                updatedAnnouncement.getPrice(),
+                updatedAnnouncement.getImageUrl(),
+                updatedAnnouncement.getCategory(),
+                updatedAnnouncement.getLocation());
+
+        return ResponseEntity.ok().body(response);
+    } else {
+        return ResponseEntity.notFound().build();
+    }
+}
+
+
 }
