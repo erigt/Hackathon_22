@@ -84,23 +84,36 @@ Hemos utilizado Miro para crear tableros donde tener accesibles todos los docume
 
 ## Equipo de desarrollo
 
-- Oli Casiano - Scrum Master - Desarrollo Backend, SQL y README.md
-https://www.linkedin.com/in/olicasiano/
-- Erika - Desarrollo de backend y SQL.
-https://www.linkedin.com/in/erikagt/
-- Herminio - Desarrollo de backend y SQL.
-https://www.linkedin.com/in/herminio-castro-riveira/
-- Lourdes - Desarrollo de Frontend.
-https://www.linkedin.com/in/lbonu/
-- Mava - Desarrollo de Miro y Frontend.
-https://www.linkedin.com/in/mavafigalloz/
-- Laura - Desarrollo de Figma y Frontend.
-https://www.linkedin.com/in/laura-gil-solano/
-- Oliver - Desarrollo de Frontend.
+### Oli Casiano - Scrum Master - Desarrollo de Backend, SQL y README.md
+- https://www.linkedin.com/in/olicasiano/
 
+- https://github.com/ImLauraGS
+### Erika - Desarrollo de Backend y SQL.
+- https://www.linkedin.com/in/erikagt/
 
+- https://github.com/erigt
+### Herminio - Desarrollo de Backend y SQL.
+- https://www.linkedin.com/in/herminio-castro-riveira/
 
-## Isnstalación
+- https://github.com/herminiocastro
+### Lourdes - Desarrollo Frontend, pagina de detalles.
+- https://www.linkedin.com/in/lbonu/
+
+- https://github.com/Lulubonucci
+### Mava - Desarrollo de Frontend y miro.
+- https://www.linkedin.com/in/mavafigalloz/
+
+- https://github.com/mavafiza
+### Laura - Desarrollo de Figma y Frontend.
+- https://www.linkedin.com/in/laura-gil-solano/
+
+- https://github.com/ImLauraGS
+### Alicia - Desarrollo de Frontend.
+- https://www.linkedin.com/in/alicia-redondo-redondo
+
+- https://github.com/Aliciared7
+
+# Instalación
 ## Pasos para inicializar la aplicación y requisitos necesarios.
 
 - Para poder inicializar el proyecto necesitaremos un editor de codigo fuente, por ejemplo VS CODE:
@@ -135,7 +148,7 @@ Form: Añadir un nuevo anuncio disponible
 ![Añadir anuncio](/frontend/public/vista-form-mascoticos.png)
 
 
-## English
+# English
 
 Introducing MASCOTICOS: Your community for animal welfare!
 
@@ -171,7 +184,8 @@ git branches
 | feature-footer | Branch to implement the footer to all pages, merge and delete |
 
 ![](/FRONTEND/public/logo.png)
-Project description
+
+## Project description
 
 We have been asked to make a free-theme marketplace, we have decided to make it about services and products for animals!
 
@@ -179,7 +193,7 @@ We will start by creating an ad creation system, so that we can add ads for serv
 
 In order to make their and our lives easier, we are asked to, if possible, provide a scaling of the application in order to improve it in the future and have new functionalities in a simple way. For example, adding a user registration, and extra functions.
 
-🛠️ The basic functionalities covered by the web application are the following:
+### The basic functionalities covered by the web application are the following:
 
     Publish an ad on the application.
     To be able to visualize all the ads on a main page.
@@ -187,7 +201,7 @@ In order to make their and our lives easier, we are asked to, if possible, provi
     An individual page for each specific product.
     Have the possibility of being able to upload a product or a service (differentiated by category).
 
-EXTRA
+### EXTRA
 
     Search engine for ads by category.
     User login to be able to save ads as favorites.
@@ -219,19 +233,34 @@ We have used Miro to create dashboards where all planning documents are accessib
 
 ## Development team
 
-- Oli Casiano - Scrum Master - Backend development, SQL and README.md
-https://www.linkedin.com/in/olicasiano/
-- Erika - Backend and SQL development.
-https://www.linkedin.com/in/erikagt/
-- Herminio - Backend and SQL development.
-https://www.linkedin.com/in/herminio-castro-riveira/
-- Lourdes - Frontend development.
-https://www.linkedin.com/in/lbonu/
-- Mava - Miro and Frontend development.
-https://www.linkedin.com/in/mavafigalloz/
-- Laura - Figma and Frontend development.
-https://www.linkedin.com/in/laura-gil-solano/
-- Alicia - Frontend development
+### Oli Casiano - Scrum Master - Backend development, SQL and README.md
+- https://www.linkedin.com/in/olicasiano/
+
+- https://github.com/ImLauraGS
+### Erika - Backend and SQL development.
+- https://www.linkedin.com/in/erikagt/
+
+- https://github.com/erigt
+### Herminio - Backend and SQL development.
+- https://www.linkedin.com/in/herminio-castro-riveira/
+
+- https://github.com/herminiocastro
+### Lourdes - Frontend development.
+- https://www.linkedin.com/in/lbonu/
+
+- https://github.com/Lulubonucci
+### Mava - Miro and Frontend development.
+- https://www.linkedin.com/in/mavafigalloz/
+
+- https://github.com/mavafiza
+### Laura - Figma and Frontend development.
+- https://www.linkedin.com/in/laura-gil-solano/
+
+- https://github.com/ImLauraGS
+### Alicia - Frontend development.
+- https://www.linkedin.com/in/alicia-redondo-redondo
+
+- https://github.com/Aliciared7
 
 
 
