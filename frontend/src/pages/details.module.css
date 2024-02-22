@@ -24,3 +24,14 @@
     font-weight: 700;
 }
 
+.btnGroup{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btnGroup svg{
+   font-size: 40px;
+   cursor: pointer;
+}
+
