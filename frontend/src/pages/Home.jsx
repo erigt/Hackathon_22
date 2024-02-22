@@ -23,7 +23,7 @@ export default function Home() {
   }, [])
   return (
     <>
-      <Header text={'Iniciar Sesion'} />
+      <Header text1={'Iniciar Sesion'} text2={'Hazte Vip'} />
       <main className={styles.homeContainer}>
         <h1>¡Mas que una tienda, ¡una comunidad!</h1>
         <Search />
