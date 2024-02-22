@@ -1,3 +1,5 @@
+
+
 form {
 
     display: flex;
@@ -62,4 +64,16 @@ textarea {
     width: 100%;
     justify-content: center;
     gap: 100px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.successMessage {
+    color: green;
+    font-size: 14px;
+    margin-top: 4px;
 }
