@@ -1,19 +1,39 @@
-// export default function validateForm({ name, email, password }) {
-// 	if (!name.trim()) {
-// 		return 'Username required';
-// 	}
-// 	const regex =
-// 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// 	if (!email) {
-// 		return 'Email required';
-// 	} else if (regex.test(email.toLocalLowerCase)) {
-// 		return 'Email address is invalid';
-// 	}
-// 	if (!password) {
-// 		return 'Password is required';
-// 	} else if (password.length < 6) {
-// 		return 'Password needs to be 6 characters or more';
-// 	}
+const Validator = (formData) => {
+    const errors = {};
 
-// 	return null;
-// }
+    if (!formData.title.trim()) {
+        errors.title = 'El título es requerido';
+    }
+
+    if (!formData.category.trim()) {
+        errors.category = 'La categoría es requerida';
+    }
+
+    if (!formData.location.trim()) {
+        errors.location = 'La localización es requerida';
+    }
+
+    if (!formData.price.trim()) {
+        errors.price = 'El precio es requerido';
+    } else if (isNaN(Number(formData.price))) {
+        errors.price = 'El precio debe ser un número';
+    }
+
+    if (!formData.imageUrl.trim()) {
+        errors.imageUrl = 'La URL de la imagen es requerida';
+    } else if (!/^https?:\/\/\S+$/i.test(formData.imageUrl)) {
+        errors.imageUrl = 'La URL de la imagen no es válida';
+    }
+
+    if (!formData.contact.trim()) {
+        errors.contact = 'El número de contacto es requerido';
+    }
+
+    if (!formData.description.trim()) {
+        errors.description = 'La descripción es requerida';
+    }
+
+    return errors;
+};
+
+export default Validator;

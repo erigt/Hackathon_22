@@ -1,5 +1,7 @@
+
+
 form {
-    
+
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -13,13 +15,13 @@ h2 {
     color: var(--color-heading);
     width: 100%;
     text-align: center;
-  }
+}
 
-  .homeContainer h1{
+.homeContainer h1 {
     width: 40%;
     font-size: 60px;
     text-align: center;
-    color: var( --color-heading);
+    color: var(--color-heading);
     margin: 2rem;
 }
 
@@ -28,15 +30,19 @@ h2 {
     flex-direction: column;
     width: 55%;
     margin-top: 15px;
-            input, select {
-            background-color: #D7D4D4;
-            border: none;
-            height: 40px;
-            border-radius: 12px;
-            color: #757575;
-            padding-left: 50px
-    };
-    
+
+    input,
+    select {
+        background-color: #D7D4D4;
+        border: none;
+        height: 40px;
+        border-radius: 12px;
+        color: #757575;
+        padding-left: 50px
+    }
+
+    ;
+
 }
 
 .bckgOptions {
@@ -50,7 +56,7 @@ textarea {
     color: #757575;
     padding: 35px 0 0 50px;
     font-family: "Montserrat", sans-serif;
-} 
+}
 
 .flexBotton {
     display: flex;
@@ -58,4 +64,16 @@ textarea {
     width: 100%;
     justify-content: center;
     gap: 100px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.successMessage {
+    color: green;
+    font-size: 14px;
+    margin-top: 4px;
 }

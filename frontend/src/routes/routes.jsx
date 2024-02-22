@@ -4,20 +4,23 @@ import {
 import Home from "../pages/Home";
 import Details from "../pages/Details";
 import AddForm from "../pages/AddForm";
+import Vip from "../pages/Vip";
 
-
-  export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home/>,
-    },
-    {
-        path: `/details/:id`,
-        element: <Details/>
-    },
-    {
-        path: "/addform",
-        element: <AddForm/>
-    }
-  ]);
-
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/details:id",
+    element: <Details />
+  },
+  {
+    path: "/addform",
+    element: <AddForm />
+  },
+  {
+    path: "/vip",
+    element: <Vip />
+  }
+]);
