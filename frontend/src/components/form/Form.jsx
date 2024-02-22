@@ -1,10 +1,13 @@
-
 import React, { useState } from 'react';
 import './form.modules.css';
 import Btn from "../Button/Btn";
-
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+    const navigate = useNavigate();
+    const baseURL = "http://localhost:8080/announcement"
+
     const [formulario, setFormulario] = useState({
         titulo: '',
         categoria: '',
@@ -23,19 +26,23 @@ const Form = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setFormulario({
-            titulo: '',
-            categoria: '',
-            localizacion: '',
-            precio: '',
-            imagen: '',
-            contacto: '',
-            descripcion: ''
-        });
-    };
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        console.log(event)
+        await axios.post(baseURL,
+            {
+                titulo: titulo,
+                categoria: categoria,
+                localizacion: localizacion,
+                precio: precio,
+                imagen: imagen,
+                contacto: contacto,
+                descripcion: descripcion
+            }
+        )
+        alert('Tu peludito se ha guardado correctamente')
+        navigate("/adoptar")
+    }
 
 
 
@@ -55,34 +62,34 @@ const Form = () => {
             </div>
             <div className='widthForm'>
                 <label>Localizacion:</label>
-                <input type="text" name="localizacion" value={formulario.localizacion} onChange={handleChange} placeholder='Código Postal'/>
+                <input type="text" name="localizacion" value={formulario.localizacion} onChange={handleChange} placeholder='Código Postal' />
             </div>
             <div className='widthForm'>
                 <label>Precio:</label>
-                <input type="text" name="precio" value={formulario.precio} onChange={handleChange} placeholder='Precio'/>
+                <input type="text" name="precio" value={formulario.precio} onChange={handleChange} placeholder='Precio' />
             </div>
             <div className='widthForm'>
                 <label>Imagen:</label>
-                <input type="text" name="imagen" value={formulario.imagen} onChange={handleChange} placeholder='Url'/>
+                <input type="text" name="imagen" value={formulario.imagen} onChange={handleChange} placeholder='Url' />
             </div>
             <div className='widthForm'>
                 <label>Contacto:</label>
-                <input type="text" name="contacto" value={formulario.contacto} onChange={handleChange} placeholder='número de teléfono'/>
+                <input type="text" name="contacto" value={formulario.contacto} onChange={handleChange} placeholder='número de teléfono' />
             </div>
             <div className='widthForm'>
                 <label>Descripcion:</label>
                 <textarea name="descripcion" value={formulario.descripcion} onChange={handleChange} rows={6} placeholder='Descripción'></textarea>
             </div>
-<br /><br />
+            <br /><br />
 
             <div className='flexBotton'>
                 <Btn color="tertiary" text="Añadir" />
-                <Btn color="secondary" text="Atrás"/>
+                <Btn color="secondary" text="Atrás" />
 
             </div>
         </form>
 
-        
+
     );
 }
 

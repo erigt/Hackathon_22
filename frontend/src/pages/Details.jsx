@@ -1,6 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+
 
 export default function Details() {
   const [animal, setAnimal] = useState([]);
@@ -14,6 +17,7 @@ export default function Details() {
   }, [id]);
   return (
     <div>
+      <Header text={'Cerrar Sesion'} />
       <img
         src={animal.imageUrl}
         alt={animal.title} />
@@ -23,7 +27,7 @@ export default function Details() {
       <p>{animal.location}</p>
       <p>{animal.category}</p>
       <p>{animal.description}</p>
-
+      <Footer />
     </div>
   )
 }
