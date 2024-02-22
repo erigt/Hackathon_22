@@ -1,0 +1,17 @@
+.headerContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+
+}
+
+.btnGroup{
+    display: flex;
+    gap: 1rem;
+}
+
+.btnGroup button{
+    color:white;
+    font-weight: 600;
+}
