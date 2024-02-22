@@ -129,6 +129,33 @@ https://code.visualstudio.com/download
 
 - Para la base de datos la tenemos a traves de PostgreSQL, puedes acceder a traves de este enlace:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
+- Una vez todo instalado usaremos el comando ```./mvnw spring-boot:run``` para levantar el backend y ```npm run dev``` para levantar el frontend
+
+- Si nos sale un error de JAVA_HOME es por el tema de las variables de entorno, os dejo una pequeña guia para poder realicarlo:
+
+```
+Edita las variables de entorno:
+
+    Windows:
+        Busca "Sistema" en el menú Inicio y selecciona "Propiedades del sistema".
+        Haz clic en "Configuración avanzada del sistema".
+        En la pestaña "Opciones avanzadas", haz clic en "Variables de entorno".
+        En la sección "Variables del sistema", busca la variable "JAVA_HOME". Si no existe, crea una nueva.
+        Edita el valor de "JAVA_HOME" para que apunte a la ruta de la carpeta de instalación de Java (por ejemplo, C:\Program Files\Java\jdk-19).
+        Crea una nueva variable de entorno llamada "PATH" si no existe.
+        Agrega al final del valor de "PATH" la siguiente línea: ;%JAVA_HOME%\bin.
+    macOS:
+        Abre "Preferencias del sistema".
+        Selecciona "Perfil".
+        Haz clic en "Avanzado".
+        Haz clic en el botón "+".
+        En el campo "Nombre", escribe "JAVA_HOME".
+        En el campo "Valor", escribe la ruta de la carpeta de instalación de Java (por ejemplo, /Library/Java/JavaVirtualMachines/jdk19.jdk/Contents/Home).
+        Haz clic en el botón "+".
+        En el campo "Nombre", escribe "PATH".
+        En el campo "Valor", escribe export PATH=$PATH:$JAVA_HOME/bin.
+        Cierra la ventana de "Preferencias del sistema".
+```
 
 ## Vistas de la aplicación
 
