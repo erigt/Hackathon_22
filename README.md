@@ -23,6 +23,11 @@ Descarga la aplicación ahora y únete a la comunidad que está cambiando el mun
 
 ¡Empieza a disfrutar de todos los beneficios que *MASCOTICOS* tiene para ti y tu mascota!
 
+ <video width="640" height="480" controls>
+  <source src="./frontend/public/videoMascoticos.mp4" type="video/mp4">
+Su navegador no soporta la etiqueta de vídeo.
+</video> 
+
 # git branches
    ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
 
@@ -55,7 +60,7 @@ De cara a facilitar la vida de ellos y nuestra, se nos pide que, si es posible, 
 - Un base de datos donde guardemos todos los anuncios disponibles.
 - Una pagina individual para cada producto especifico.
 - Tener la posibilidad de poder subir un producto o un servicio ( diferenciado por categoria ).
-EXTRA
+### EXTRA
 - Buscador para anuncios por categoria.
 - Login de usuario para poder poder guardar anuncios como favoritos.
 - Geolocalizacion para diferentes servicios ( como por ejemplo paseo de mascotas ).
@@ -134,7 +139,9 @@ https://code.visualstudio.com/download
 
 - Una vez todo instalado usaremos el comando ```./mvnw spring-boot:run``` para levantar el backend y ```npm run dev``` para levantar el frontend
 
-- Si nos sale un error de JAVA_HOME es por el tema de las variables de entorno, os dejo una pequeña guia para poder realicarlo:
+- Si nos sale un error de JAVA_HOME es por el tema de las variables de entorno, os dejo una pequeña guia para poder realizarlo sin problema justo aqui de bajo.
+
+- Para poder realizar los test desarrollados lo podremos hacer desde backend con el comando ```npm test``` y de la misma manera desde el backend con el comando ```./mvnw test```
 
 ```
 Edita las variables de entorno:
