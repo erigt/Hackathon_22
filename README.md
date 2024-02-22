@@ -84,15 +84,15 @@ Hemos utilizado Miro para crear tableros donde tener accesibles todos los docume
 
 ## Equipo de desarrollo
 
-### Oli Casiano - Scrum Master - Desarrollo de Backend, SQL y README.md
+### Oli Casiano - Scrum Master - Desarrollo de Backend, test de backend, SQL, README.md
 - https://www.linkedin.com/in/olicasiano/
 
 - https://github.com/ImLauraGS
-### Erika - Desarrollo de Backend y SQL.
+### Erika - Desarrollo de Backend, metodo PUT, test y SQL.
 - https://www.linkedin.com/in/erikagt/
 
 - https://github.com/erigt
-### Herminio - Desarrollo de Backend y SQL.
+### Herminio - Desarrollo de Backend, test de backend y SQL.
 - https://www.linkedin.com/in/herminio-castro-riveira/
 
 - https://github.com/herminiocastro
