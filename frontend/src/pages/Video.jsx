@@ -8,7 +8,7 @@ export default function AddForm() {
     return (
         <>
             <section className='videoContainer'>
-            <Header text1={'Cerrar Sesion'} text2={'Home'} />
+            <Header text1={'Iniciar Sesion'} text2={'Hazte Vip ˗ˏˋ ★ ˎˊ˗ '} />
                 <h2>¡Aventura Mascoticos!</h2>
                 <VideoIntro />
             <Footer />
