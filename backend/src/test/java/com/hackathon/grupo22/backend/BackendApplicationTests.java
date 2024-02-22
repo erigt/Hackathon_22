@@ -43,36 +43,44 @@ class BackendApplicationTests {
         @Test
         public void returnTittleAnnoucements() throws Exception {
                 announcementRepository.saveAll(List.of(
-                      new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
-                      "tupaseodeperros@gmail.com", 60,
-                      "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")  
-                ));
+                                new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
+                                                "tupaseodeperros@gmail.com", 60,
+                                                "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")));
                 api.perform(get("/announcement"))
-                .andExpect(jsonPath("$[0].title", equalTo("Paseo de perros")));
+                                .andExpect(jsonPath("$[0].title", equalTo("Paseo de perros")));
 
         }
 
         @Test
         public void returnPriceAnnoucements() throws Exception {
                 announcementRepository.saveAll(List.of(
-                      new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
-                      "tupaseodeperros@gmail.com", 60,
-                      "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")  
-                ));
+                                new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
+                                                "tupaseodeperros@gmail.com", 60,
+                                                "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")));
                 api.perform(get("/announcement"))
-                .andExpect(jsonPath("$[0].price", equalTo(60)));
+                                .andExpect(jsonPath("$[0].price", equalTo(60)));
 
         }
 
         @Test
         public void returnCategoryAnnoucements() throws Exception {
                 announcementRepository.saveAll(List.of(
-                      new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
-                      "tupaseodeperros@gmail.com", 60,
-                      "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")  
-                ));
+                                new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
+                                                "tupaseodeperros@gmail.com", 60,
+                                                "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")));
                 api.perform(get("/announcement"))
-                .andExpect(jsonPath("$[0].category", equalTo("SERVICIO")));
+                                .andExpect(jsonPath("$[0].category", equalTo("SERVICIO")));
+
+        }
+
+        @Test
+        public void returnContactAnnoucements() throws Exception {
+                announcementRepository.saveAll(List.of(
+                                new Announcement(1, "Paseo de perros", "Paseamos perritos por zonas verdes y al sol",
+                                                "tupaseodeperros@gmail.com", 60,
+                                                "www.google.com/imagendeperro", Category.SERVICIO, "Asturias")));
+                api.perform(get("/announcement"))
+                                .andExpect(jsonPath("$[0].contact", equalTo("tupaseodeperros@gmail.com")));
 
         }
 
@@ -135,9 +143,8 @@ class BackendApplicationTests {
                                 "tupaseodeperros@gmail.com", 60,
                                 "www.image.com/imageOfDog.png", Category.SERVICIO, "Asturias");
 
-                
                 assertEquals(3, delete.getId());
                 assertEquals("Servicio de paseo...", delete.getDescription());
-        }   
+        }
 
 }
