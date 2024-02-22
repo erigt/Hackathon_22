@@ -30,7 +30,7 @@ export default function Details() {
   }
   return (
     <>
-      <Header text={'Cerrar Sesion'} />
+      <Header text1={'Iniciar Sesion'} text2={'Hazte Vip'} />
       <main className={styles.detailsContainer}>
         <article>
           <img
