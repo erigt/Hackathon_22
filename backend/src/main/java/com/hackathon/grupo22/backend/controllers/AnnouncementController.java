@@ -1,7 +1,5 @@
 package com.hackathon.grupo22.backend.controllers;
 
-//import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,9 +18,10 @@ import com.hackathon.grupo22.backend.persistence.AnnouncementRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
 import org.springframework.web.bind.annotation.RequestBody;
-//import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @RestController
@@ -41,14 +40,14 @@ public class AnnouncementController {
         List<Announcement> announcementInDataBaseAnnouncement = repository.findAll();
         for (Announcement announcement : announcementInDataBaseAnnouncement) {
             announcementResponse.add(new AnnouncementResponse(
-                    announcement.getId(),
-                    announcement.getTitle(),
-                    announcement.getDescription(),
-                    announcement.getContact(),
-                    announcement.getPrice(),
-                    announcement.getImageUrl(),
-                    announcement.getCategory(),
-                    announcement.getLocation()));
+                announcement.getId(),
+                announcement.getTitle(),
+                announcement.getDescription(),
+                announcement.getContact(),
+                announcement.getPrice(),
+                announcement.getImageUrl(),
+                announcement.getCategory(),
+                announcement.getLocation()));
         }
         return announcementResponse;
     }
@@ -59,14 +58,14 @@ public class AnnouncementController {
         if (optionalAnnouncement.isPresent()) {
             Announcement announcement = optionalAnnouncement.get();
             AnnouncementResponse response = new AnnouncementResponse(
-                    announcement.getId(),
-                    announcement.getTitle(),
-                    announcement.getDescription(),
-                    announcement.getContact(),
-                    announcement.getPrice(),
-                    announcement.getImageUrl(),
-                    announcement.getCategory(),
-                    announcement.getLocation());
+                announcement.getId(),
+                announcement.getTitle(),
+                announcement.getDescription(),
+                announcement.getContact(),
+                announcement.getPrice(),
+                announcement.getImageUrl(),
+                announcement.getCategory(),
+                announcement.getLocation());
             return ResponseEntity.ok().body(response);
         } else {
             return ResponseEntity.notFound().build();
@@ -109,4 +108,39 @@ public class AnnouncementController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Announcement not found");
         }
     }
+
+    
+
+    @PutMapping("/announcement/{id}")
+    public ResponseEntity<AnnouncementResponse> updateAnnouncement(@PathVariable Integer id, @RequestBody AnnouncementRequest updateAnnouncement) {
+    Optional<Announcement> optionalAnnouncement = repository.findById(id);
+    if (optionalAnnouncement.isPresent()) {
+                Announcement existingAnnouncement = optionalAnnouncement.get();
+                existingAnnouncement.setTitle(updateAnnouncement.getTitle());
+                existingAnnouncement.setDescription(updateAnnouncement.getDescription());
+                existingAnnouncement.setContact(updateAnnouncement.getContact());
+                existingAnnouncement.setPrice(updateAnnouncement.getPrice());
+                existingAnnouncement.setImageUrl(updateAnnouncement.getImageUrl());
+                existingAnnouncement.setCategory(updateAnnouncement.getCategory());
+                existingAnnouncement.setLocation(updateAnnouncement.getLocation());
+
+        Announcement updatedAnnouncement = repository.save(existingAnnouncement);
+
+        AnnouncementResponse announcementResponse = new AnnouncementResponse(
+                updatedAnnouncement.getId(),
+                updatedAnnouncement.getTitle(),
+                updatedAnnouncement.getDescription(),
+                updatedAnnouncement.getContact(),
+                updatedAnnouncement.getPrice(),
+                updatedAnnouncement.getImageUrl(),
+                updatedAnnouncement.getCategory(),
+                updatedAnnouncement.getLocation());
+
+        return ResponseEntity.ok().body(announcementResponse);
+    } else {
+        return ResponseEntity.notFound().build();
+    }
+}
+
+
 }
