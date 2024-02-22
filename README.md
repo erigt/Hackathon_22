@@ -84,6 +84,8 @@ De cara a facilitar la vida de ellos y nuestra, se nos pide que, si es posible, 
 ![Static Badge](https://img.shields.io/badge/FrontendDep-Axios%20v.1.6.7-red?logo=axios)
 ![Static Badge](https://img.shields.io/badge/FrontendDep-MUI-red?logo=mui)
 
+![Test Badge](https://img.shields.io/badge/Tests-React%20%2B%20Vite-blue?style=flat-square&logo=react&logoColor=61dafb&logoWidth=20)
+![Test Badge](https://img.shields.io/badge/Tests-JUnit-green?style=flat-square&logo=junit) 
 
 # Planificación
 Hemos utilizado Miro para crear tableros donde tener accesibles todos los documentos de planificación: historias de usuario, kanban y funciones.
